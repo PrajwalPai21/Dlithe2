@@ -4,91 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background: #005bb5;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: #004494;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1, h2, h3 {
+            color: #0073e6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #0073e6;
+            color: white;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <header>Welcome to the Travel Website!</header>
+    <nav>
+        <a href="https://www.lonelyplanet.com/">Destinations</a>
+        <a href="https://www.travelandleisure.com/">Travel Tips</a>
+        <a href="https://www.skyscanner.com/">Flights</a>
+        <a href="https://www.booking.com/">Hotels</a>
+        <a href="https://www.tripadvisor.com/">Reviews</a>
+    </nav>
+    <div class="container">
+        <h2>Latest Travel News</h2>
+        <h3>Top 5 Destinations for 2025</h3>
+        <table>
+            <tr>
+                <th>Destination</th>
+                <th>Why Go?</th>
+            </tr>
+            <tr>
+                <td>Tokyo, Japan</td>
+                <td>Technology, culture, sushi!</td>
+            </tr>
+            <tr>
+                <td>Paris, France</td>
+                <td>Art, history, romance!</td>
+            </tr>
+            <tr>
+                <td>Barcelona, Spain</td>
+                <td>Beaches, architecture, tapas!</td>
+            </tr>
+            <tr>
+                <td>New York, USA</td>
+                <td>City life, Broadway, pizza!</td>
+            </tr>
+            <tr>
+                <td>Rome, Italy</td>
+                <td>Ancient ruins, pizza, gelato!</td>
+            </tr>
+        </table>
+        <p>Discover the most breathtaking travel destinations that should be on your bucket list this year. Whether you love exploring vibrant cities, relaxing on pristine beaches, or experiencing new cultures, there's something for everyone.</p>
+        <h3>Exclusive Travel Offers</h3>
+        <p>Grab these amazing travel discounts before they're gone!</p>
+        <ul>
+            <li><strong>Luxury Getaway to the Maldives:</strong> $5000 (All-inclusive package!)</li>
+            <li><strong>Adventure Trip to Peru:</strong> $3200 (Includes Machu Picchu tour!)</li>
+            <li><strong>5-Star Resort in Bali:</strong> $4500 per week (Limited availability!)</li>
+        </ul>
+        <p>Don't miss out on these exclusive travel opportunities. Whether you're looking for adventure, relaxation, or cultural exploration, we have the perfect getaway for you.</p>
+        
+        <img src="Travel1.jpg">
 
-    <h1>Welcome to the Travel Website!</h1>
-    <p>Discover cool places, awesome deals, and some random travel tips!</p>
-    
-    <h2>Navigation</h2>
-    <ul>
-        <li><a href="https://www.lonelyplanet.com/">Destinations</a></li>
-        <li><a href="https://www.travelandleisure.com/">Travel Tips</a></li>
-        <li><a href="https://www.skyscanner.com/">Flights</a></li>
-        <li><a href="https://www.booking.com/">Hotels</a></li>
-        <li><a href="https://www.tripadvisor.com/">Reviews</a></li>
-    </ul>
-    <hr>
-    
-    <h2>Latest Travel News</h2>
-    <h3>Top 5 Destinations for 2025</h3>
-    <table border="1">
-        <tr>
-            <th>Destination</th>
-            <th>Why Go?</th>
-        </tr>
-        <tr>
-            <td>Tokyo, Japan</td>
-            <td>Technology, culture, sushi!</td>
-        </tr>
-        <tr>
-            <td>Paris, France</td>
-            <td>Art, history, romance!</td>
-        </tr>
-        <tr>
-            <td>Barcelona, Spain</td>
-            <td>Beaches, architecture, tapas!</td>
-        </tr>
-        <tr>
-            <td>New York, USA</td>
-            <td>City life, Broadway, pizza!</td>
-        </tr>
-        <tr>
-            <td>Rome, Italy</td>
-            <td>Ancient ruins, pizza, gelato!</td>
-        </tr>
-    </table>
-    <img src="Travel1.jpg" width="500" height="500">
-
-    <h3>Best Travel Deals of the Month</h3>
-    <p>Looking for deals?</p>
-    <ul>
-        <li><strong>Flight to Tokyo:</strong> 4000 (Limited time offer!)</li>
-        <li><strong>Hotel in Paris:</strong> 8000 per night (Book now!)</li>
-        <li><strong>Guided Tour in Rome:</strong> 5000 (Discuont)</li>
-    </ul>
-    <img src="Travel2.jpg" width="500" height="500">
-    
-    <h3>Budget Travel Tips</h3>
-    <p>Here’s how to stretch your dollar:</p>
-    <ul>
-        <li>Use local transportation to get around.</li>
-        <li>Find street food—it's delicious and cheap!</li>
-        <li>Book in advance to score the best deals.</li>
-    </ul>
-    <hr>
-    
-    <h2>Featured Articles</h2>
-    <h3>Greate places to visit!</h3>
-    <p>Enjoy Your Stay!</p>
-    <img src="Travel3.jpg" width="500" height="500">
-    
-    <h3>Ultimate Travel Checklist</h3>
-    <p>Don’t forget these essentials:</p>
-    <ul>
-        <li>Passport</li>
-        <li>Comfortable shoes</li>
-        <li>Travel adapter</li>
-        <li>Travel-sized toiletries</li>
-    </ul>
-    <img src="Travel4.jpg" width="500" height="500">
-    
-    <h2>Contact Us</h2>
-    <p>Got a question or a cool travel tip? <a href="mailto:contact@travelwebsite.com">Email Us!</a></p>
-    
+        <h3>Best Travel Deals of the Month</h3>
+        <p>Looking for deals?</p>
+        <ul>
+            <li><strong>Flight to Tokyo:</strong> 4000 (Limited time offer!)</li>
+            <li><strong>Hotel in Paris:</strong> 8000 per night (Book now!)</li>
+            <li><strong>Guided Tour in Rome:</strong> 5000 (Discount)</li>
+        </ul>
+        <img src="Travel2.jpg">
+        
+        <h2>Featured Articles</h2>
+        <article>
+            <h3>The Ultimate Guide to Backpacking in Europe</h3>
+            <p>Explore the best tips and tricks for traveling through Europe on a budget. From hostels to cheap flights, discover how to maximize your adventure.</p>
+            <a href="https://www.google.com">Read more...</a>
+        </article>
+        <article>
+            <h3>10 Must-Try Street Foods Around the World</h3>
+            <p>From Bangkok’s Pad Thai to Mexico City’s Tacos al Pastor, dive into the most delicious street food experiences around the globe.</p>
+            <a href="https://www.google.com">Read more...</a>
+        </article>
+        <article>
+            <h3>How to Find the Best Travel Deals Online</h3>
+            <p>Learn the secrets of scoring cheap flights, hotels, and vacation packages with expert tips and trusted travel websites.</p>
+            <a href="https://www.google.com">Read more...</a>
+        </article>
+    </div>
     <footer>
-        <p>&copy; 2025 Travel Website.</p>
+        &copy; 2025 Travel Website.
     </footer>
-    
 </body>
 </html>
