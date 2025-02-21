@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Need this for X icon to appear Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="script" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3e3e3;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .advertisement-top {
+            background: yellow;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+            font-size: 20px;
+            border-bottom: 3px solid red;
+            width: 100%;
+        }
+        header {
+            background: #8B0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+        }
+        nav {
+            background: #A52A2A;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .breaking-news {
+            background: red;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .breaking-news span {
+            display: inline-block;
+            animation: marquee 5s linear infinite;
+        }
+        .main-content {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #FAEBD7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .content {
+            width: 100%;
+        }
+        h1, h2 {
+            color: #8B0000;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .card-body{
+            text-align: center;            
+        }
+
+        .goTravelGobtn{
+            display: inline-block;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 13px 23px;
+            border: 1px solid #222222;
+            transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+            background: #fff;
+            color: #222222;
+        }
+
+        /* iframe {
+            width:85%;
+            height: 500px;
+            border: none;
+        } */
+
+        /* Advertisement for Travel Website */
+
+        .ad {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            top: 20px;
+            width: 50%; 
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 1s forwards;
+            animation-delay: 3s; /* Delay appearance */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            animation: showPopup 0s ease-in 10s forwards;
+        }
+        .popup {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .popup a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        @keyframes showPopup {
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        /* TRAVEL POP UP */
+
+        
+        .travelOverlay {
+            position: fixed;
+            top: 10px;  
+            right: 10px; 
+            width: 300px;
+            height: 200px; 
+            background: rgba(0, 0, 0, 0);/* This is to add background to the pop up dilogue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            animation: showPopup 0s ease-in 1s forwards;
+        }        
+        .popup {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .popup a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        @keyframes showPopup {
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .popup .fa-x {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: black;
+        }
+
+        .popup .fa-x:hover {
+            color: red;
+        }
+</style>
+</head>
+<body>
+    <div class="advertisement-top">Special Offer: Buy One Get One Free on Electronics! Limited Time Only!</div>
+    <header>Welcome to Pai News</header>
+    <div class="breaking-news">
+        <span>BREAKING NEWS: Major world event unfolding now! Stay tuned for updates.</span>
+    </div>
+    <nav>
+        <a href="https://indianexpress.com/">World News</a>
+        <a href="https://www.espn.in/">Sports</a>
+        <a href="https://www.power-technology.com/">Technology</a>
+        <a href="https://www.youtube.com/">Entertainment</a>
+        <a href="https://www.bbc.com/news">Local News</a>
+    </nav>
+
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gxtt4GEMxLQ" ></iframe>
+
+    <div class="main-content">
+        <div class="content">
+                <h2>Latest News</h2>
+                <h3>Big Event Happens Today</h3>
+                <p>This is a short description of the big event. More details coming soon... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aut excepturi perspiciatis debitis obcaecati quidem distinctio dolore deleniti voluptatibus, praesentium corporis qui vero maiores unde, nisi esse? Velit, similique repellat!</p>
+                <img src="News1.jpg" alt="Big Event">
+                <h3>Technology News Update</h3>
+                <p>Exciting news in the world of tech. Stay tuned for more information! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora illum officiis obcaecati dolores ab commodi doloribus exercitationem asperiores, mollitia repudiandae quam consequuntur culpa soluta repellat quibusdam, enim voluptatibus modi!</p>
+                <img src="News2.jpg" alt="Technology News">
+
+            <br>
+            <!-- Visit Travel Website -->
+            <div class="advertisement-top breaking-news"><span>Advertisement</span></div>
+                <section>
+                    <h1>Visit India's most famous Places Today!</h1>
+                    <div class="card">
+                        <img src="\PortfolioWebsite\NewsWebsiteUsingHTML\NewsImages\TravelWebsiteImage.png" class="card-img-top" alt="Image">
+                        <div class="card-body">
+                            <h3 class="card-title">TravelGo</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <button class="goTravelGobtn"><a href="\PortfolioWebsite\TravelWebsiteUsingHTML\TravelWebsite.html" class="btn btn-primary">Visit TravelGo</a></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- <a href="\PortfolioWebsite\TravelWebsiteUsingHTML\TravelWebsite.html"><img src="\PortfolioWebsite\NewsWebsiteUsingHTML\NewsImages\TravelWebsiteImage.png" alt="Advertisement" class="ad"></a> -->
+
+                <h3>Sports Highlights</h3>
+                <p>Check out the latest results from your favorite sports teams! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et earum necessitatibus quaerat illo alias sequi esse natus hic debitis eos, quis obcaecati consequatur nihil placeat, nulla quidem sapiente amet. Temporibus?</p>
+                <img src="News3.jpg" alt="Sports Highlights">
+                <h2>Featured Articles</h2>
+                <h3>Why the Economy is Changing</h3>
+                <p>Find out the latest economic trends and their impact on the global market. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus explicabo delectus totam. Esse quas error nulla inventore, odio iure maiores, mollitia facere possimus eos asperiores amet debitis eum ducimus hic.</p>
+                <img src="Economy.jpg" alt="Economy">
+                <h3>How to Stay Healthy in 2025</h3>
+                <p>Simple tips for maintaining good health in the modern world. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur nobis nemo natus repudiandae quibusdam repellat nulla ad. Possimus, tempora. Molestias, tenetur accusantium aspernatur dolorum optio cum neque debitis praesentium expedita?</p>
+                <img src="Health.jpg" alt="Health Tips">
+                </div>
+            </div>
+
+            <!-- Advertisement that appears after 15 seconds -->
+            <div class="overlay">
+                <div class="popup">
+                    <i class="fa-solid fa-x" onclick="closePopup()"></i>
+                    <p>Subscribe now to get the latest updates!</p>
+                    <a href="\PortfolioWebsite\registerPage.html">Subscribe Now</a>
+                </div>
+            </div>
+
+
+            <div class="travelOverlay">
+                <div class="popup">
+                    <i class="fa-solid fa-x" onclick="closePopup()"></i>
+                    <p>Wanna visit the most famous places in India?</p>
+                    <a href="\PortfolioWebsite\TravelWebsiteUsingHTML\TravelWebsite.html">Visit TravelGo Now!</a>
+                </div>
+            </div>
+        
+
+    <script>
+        function closePopup() {
+            document.querySelector('.travelOverlay').style.display = 'none';
+        }
+
+        
+    </script>
+
+    <footer>
+        <p>&copy; 2025 News Website. All rights reserved. | <a href="mailto:prajwalpai21@gmail.com" style="color: white;">Contact Us</a></p>
+    </footer>
+</body>
+</html>
