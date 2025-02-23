@@ -59,7 +59,7 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form onsubmit="alert('Subscribed Successfully!');">
+        <form id="registration-form">
             <div class="form-group">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name" required>
@@ -71,10 +71,6 @@
             <div class="form-group">
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
@@ -91,6 +87,56 @@
             <button type="submit">Subscribe</button>
         </form>
     </div>
-</body>
 
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            let firstName = document.getElementById('first-name').value.trim();
+            let lastName = document.getElementById('last-name').value.trim();
+            let age = document.getElementById('age').value.trim();
+            let phone = document.getElementById('phone').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let password = document.getElementById('password').value.trim();
+
+            if (firstName === "" || lastName === "" || age === "" || phone === "" || email === "" || password === "") {
+                alert("All fields are required.");
+                return;
+            }
+
+            if (!/^[A-Za-z]+$/.test(firstName)) {
+                alert("First name should contain only letters.");
+                return;
+            }
+
+            if (!/^[A-Za-z]+$/.test(lastName)) {
+                alert("Last name should contain only letters.");
+                return;
+            }
+
+            if (age < 18 || age > 100) {
+                alert("Age must be between 18 and 100.");
+                return;
+            }
+
+            if (!/^\d{10}$/.test(phone)) {
+                alert("Phone number must be a 10-digit number.");
+                return;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter a valid email address.");
+                return;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return;
+            }
+
+            alert("Subscribed Successfully!");
+            window.location.href = "news.html"; // Redirects to news.html
+        });
+    </script>
+</body>
 </html>
