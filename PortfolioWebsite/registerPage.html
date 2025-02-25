@@ -90,7 +90,7 @@
 
     <script>
         document.getElementById('registration-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents the default form submission
+            event.preventDefault(); // NO DEFAULT SUBMISSIONN
 
             let firstName = document.getElementById('first-name').value.trim();
             let lastName = document.getElementById('last-name').value.trim();
@@ -107,7 +107,7 @@
             if (!/^[A-Za-z]+$/.test(firstName)) {
                 alert("First name should contain only letters.");
                 return;
-            }
+            }   
 
             if (!/^[A-Za-z]+$/.test(lastName)) {
                 alert("Last name should contain only letters.");
