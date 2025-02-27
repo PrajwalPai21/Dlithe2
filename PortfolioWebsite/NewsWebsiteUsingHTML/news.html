@@ -4,8 +4,7 @@
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Website</title>
@@ -72,7 +71,7 @@
       }
       .breaking-news span {
         display: inline-block;
-        animation: marquee 8s linear infinite;
+        animation: marquee 15s linear infinite;
       }
       .main-content {
         display: flex;
@@ -140,9 +139,49 @@
         display: none;
       }
 
+      /* add the ad pop up */
+      .popup-overlay {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease;
+            /* animation: fadeOut 5s ease-in 5s forwards; */
+          }
+        .popup-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .popup i {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .popup a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .popup a:hover {
+            background: #1f78c1;
+        }
+
       /* Button Styling */
       .btnCSS {
-        background-color: #3498db;
+        background-color: #3568df;
         color: white;
         border: none;
         padding: 10px 20px;
@@ -153,12 +192,13 @@
       }
       .btnCSS:hover {
         background-color: #1f78c1;
+        scale: 1.3 90%;
       }
     </style>
   </head>
   <body>
     <div style="text-align: center;" class="advertisement-top">
-      Special Offer: Buy One Get One Free on Electronics! Limited Time Only!
+      Omega Deal! Buy 2 dresses for the price of 1 and get 1 extra dress for free!
     </div>
     <header style="text-align: center;">Welcome to Pai News</header>
     <div class="breaking-news">
@@ -227,15 +267,24 @@
           <img src="\PortfolioWebsite\NewsWebsiteUsingHTML\News1.jpg" alt="Sports Image">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dignissimos tempora corrupti. Quod recusandae fugit exercitationem earum, rem beatae quos sed consequuntur voluptatum, corporis ut dolorem? Officiis nesciunt corrupti dolorum.</p>
         </div>
-        
         <div class="news-article politics">
             <h3>Political Updates</h3>
             <p>Breaking news in the political world.</p>
             <img src="\PortfolioWebsite\NewsWebsiteUsingHTML\News2.jpg" alt="Sports Image">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dignissimos tempora corrupti. Quod recusandae fugit exercitationem earum, rem beatae quos sed consequuntur voluptatum, corporis ut dolorem? Officiis nesciunt corrupti dolorum.</p>
           </div>
+
         <!-- Travel Website Advertisement -->
         <hr>
+        <div id="popupAd" class="popup-overlay">
+          <div class="popup">
+              <i class="fa-solid fa-x" onclick="closePopup()"></i>
+              <p>Subscribe now to get the latest updates!</p>
+              <a href="\PortfolioWebsite\registerPage.html">Subscribe Now</a>
+          </div>
+      </div>
+  
+
         <section>
             <h1>Visit India's Most Famous Places Today!</h1>
             <div class="card">
@@ -245,8 +294,7 @@
                 <p>Explore the wonders of India. Book your trip today!</p>
                 <button
                   class="btnCSS"
-                  onclick="location.href='TravelWebsite.html'"
-                >
+                  onclick="location.href='/PortfolioWebsite/TravelWebsiteUsingHTML/TravelWebsite.html'">
                   Visit TravelGo
                 </button>
               </div>
@@ -254,8 +302,11 @@
           </section>
       </div>
     </div>
-
     <script>
+      function closePopup() {
+            document.getElementById("popupAd").classList.add("hidden");
+        }
+
       function toggleDropdown() {
         document.getElementById("filterDropdown").classList.toggle("show");
       }
@@ -270,10 +321,8 @@
       window.onclick = function (event) {
         if (!event.target.matches(".dropbtn")) {
           document.getElementById("filterDropdown").classList.remove("show");
-        }
-      };
+        }};
     </script>
-
     <footer>
       <p>
         &copy; 2025 News Website. All rights reserved. |

@@ -114,13 +114,14 @@
                 return;
             }
 
-            if (age < 18 || age > 100) {
+            if (age < 18 || age > 120) {
                 alert("Age must be between 18 and 100.");
                 return;
             }
-
-            if (!/^\d{10}$/.test(phone)) {
-                alert("Phone number must be a 10-digit number.");
+            let invalidNum = /^(?:\d)\1{9}$|1234567890|9876543210/;
+            // !/^\d{10}$/.test(phone)
+            if (invalidNum.test(phone) || !/^\d{10}$/.test(phone)) {  
+                alert("Please enter a valid 10 digit phone number.");
                 return;
             }
 
@@ -135,7 +136,7 @@
             }
 
             alert("Subscribed Successfully!");
-            window.location.href = "news.html"; // Redirects to news.html
+            window.location.href = "/PortfolioWebsite/NewsWebsiteUsingHTML/news.html"; // Redirects to news.html
         });
     </script>
 </body>

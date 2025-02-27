@@ -9,6 +9,25 @@
 
 </head>
 <body>
-
+    <h1>Hello World</h1>
+    <button style="width: 100px;">Yuvraj Button</button>
+    <button onclick="alert('BUTTON CLICKED')">BUTTON</button>
+    <!-- Event Listener -->
+    <button id="yuvrajButton">event Listener Button</button>
+    <p id="intro">
+        A Computer Science portal for geeks.
+    </p>
+    <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eveniet?</p>
+    <script>
+        const element = document.getElementById("intro");
+        document.getElementById("demo").innerHTML =
+            "GeeksforGeeks introduction is: " + element.innerHTML;
+    </script>
+    <script>
+        let buttonVar = document.getElementById("yuvrajButton");
+        buttonVar.addEventListener("click",function(){
+            alert("Button has been clicked. Event Listener");
+        });
+    </script>
 </body>
 </html>
