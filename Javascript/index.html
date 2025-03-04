@@ -18,16 +18,115 @@
         A Computer Science portal for geeks.
     </p>
     <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eveniet?</p>
+
+    <div class="task5">
+        <h2>Task 5 - Multiplier</h2>
+        <label for="5thTask">Enter first Parameter</label>
+        <input type="number" id="firstNum">
+        <label for="5thTask">Enter second Parameter</label>
+        <input type="number" id="secondNum">
+        <button onclick="showValueFunc()">Multiply</button>
+        <p id="productRes">Result is</p>
+    </div>
+
+    <div class="task1">
+        <h2>Task 1 - Farenheit to Celcius and Celcious to Farenheit</h2>
+        <label for="farenLabel">Enter a Farenheit Value</label>
+        <input type="number" id="farenValue">
+        <label for="celsiusLabel">Enter a Celcious Value</label>
+        <input type="number" id="celciValue">
+        <button onclick="showTempFunc()">Get Temperature</button>
+        <p id="farenID">Farenheit is</p>
+        <p id="celciID">Celcius is</p>
+    </div>
+
+    <div class="task4">
+        <h2>Task 4 - Calculator </h2>
+        <label for="calcLabel">Enter First Number</label>
+        <input type="number" id="calcNum1">
+        <label for="calcLabel">Enter Second Number</label>
+        <input type="number" id="calcNum2">
+        <br><br>
+        <button onclick = "additionFunc(calcNum1,calcNum2)">Addition</button>
+        <button onclick = "substractionFunc()">Substraction</button>
+        <button onclick = "multiplicationFunc()">Multiplication</button>
+        <button onclick = "divisionFunc()">Division</button>
+        <p id="resultPar">Result :</p>
+    </div>
     <script>
+        function showValueFunc(){
+            let parOne = document.getElementById("firstNum").value;
+            let parTwo = document.getElementById("secondNum").value;
+            let resultProduct = parOne * parTwo;
+            document.getElementById("productRes").innerHTML= `Product of ${parOne} and ${parTwo} is ${resultProduct}`;
+        }
+
+        function showTempFunc(){
+            let farenheitVar = document.getElementById("farenValue").value;
+            let celciValue = document.getElementById("celciValue").value;
+
+            let Fahrenheit = (celciValue * 9/5) + 32; 
+            let Celcius = (farenheitVar - 32) * 5/9;
+
+            document.getElementById("farenID").innerHTML = `${farenheitVar}*F when converted to Celcius gives: ${Celcius}*C`;
+            document.getElementById("celciID").innerHTML = `${celciValue}*C when converted to Farenheit gives: ${Fahrenheit}*C`;
+        }
+            let var1 = document.getElementById("calcNum1").value;
+            let var2 = document.getElementById("calcNum2").value;
+            
+            function additionFunc(num1,num2){
+                let add = num1+num2;
+                document.getElementById("resultPar").innerHTML = `Result : ${add}`;
+            }
+            function substractionFunc(){
+                let sub = var1-var2;
+                document.getElementById("resultPar").innerHTML = `Result : ${sub}`;
+            }
+            function multiplicationFunc(){
+                let mul = var1*var2;
+                document.getElementById("resultPar").innerHTML = `Result : ${mul}`;
+            }
+            function divisionFunc(){
+                let div = var1/var2;
+                document.getElementById("resultPar").innerHTML = `Result : ${div}`;
+            }
+
         const element = document.getElementById("intro");
         document.getElementById("demo").innerHTML =
             "GeeksforGeeks introduction is: " + element.innerHTML;
-    </script>
-    <script>
+
         let buttonVar = document.getElementById("yuvrajButton");
         buttonVar.addEventListener("click",function(){
             alert("Button has been clicked. Event Listener");
         });
+
+
+        // program for a simple calculator
+
+        // take the operator input
+        // const operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+        // // take the operand input
+        // const number1 = parseFloat(prompt('Enter first number: '));
+        // const number2 = parseFloat(prompt('Enter second number: '));
+
+        // let result;
+        // // using if...else if... else
+        // if (operator == '+') {
+        //     result = number1 + number2;
+        // }
+        // else if (operator == '-') {
+        //     result = number1 - number2;
+        // }
+        // else if (operator == '*') {
+        //     result = number1 * number2;
+        // }
+        // else {
+        //     result = number1 / number2;
+        // }
+
+        // // display the result
+        // console.log(`${number1} ${operator} ${number2} = ${result}`);
     </script>
 </body>
 </html>
