@@ -1,0 +1,107 @@
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const Playlist = ({ songs, setCurrentSongIndex, addToQueue }) => {
+  return (
+    <div className="playlist mt-4">
+      <h4>Playlist</h4>
+      <ul className="list-group">
+        {songs.map((song, index) => (
+          <li key={index} className="list-group-item d-flex justify-content-between">
+            {song}
+            <div>
+              <button className="btn btn-sm btn-primary me-2" onClick={() => setCurrentSongIndex(index)}>
+                Play
+              </button>
+              <button className="btn btn-sm btn-warning" onClick={() => addToQueue(index)}>
+                Queue
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Playlist;
+
+
+
+import { useState, useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Playlist from "./components/Playlist";
+
+function App() {
+  const songs = ["song1.mp3", "song2.mp3", "song3.mp3"];
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [queue, setQueue] = useState([]);
+  const audioRef = useRef(new Audio(songs[currentSongIndex]));
+
+  const playPause = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const nextSong = () => {
+    if (queue.length > 0) {
+      const nextSongIndex = queue[0];
+      setQueue(queue.slice(1)); // Remove from queue
+      setCurrentSongIndex(nextSongIndex);
+    } else {
+      setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
+    }
+
+    audioRef.current.pause();
+    audioRef.current = new Audio(songs[currentSongIndex]);
+    if (isPlaying) audioRef.current.play();
+  };
+
+  const addToQueue = (index) => {
+    setQueue([...queue, index]);
+  };
+
+  const removeFromQueue = (index) => {
+    setQueue(queue.filter((songIndex) => songIndex !== index));
+  };
+
+  return (
+    <div className="container text-center mt-5">
+      <div className="card shadow-lg p-4">
+        <h2 className="mb-3">🎵 Simple Music Player</h2>
+        <p className="lead">Now Playing: <strong>{songs[currentSongIndex]}</strong></p>
+        <div className="btn-group">
+          <button className="btn btn-primary" onClick={playPause}>
+            {isPlaying ? "Pause" : "Play"}
+          </button>
+          <button className="btn btn-success" onClick={nextSong}>Next</button>
+        </div>
+
+        <Playlist songs={songs} setCurrentSongIndex={setCurrentSongIndex} addToQueue={addToQueue} />
+
+        <h4 className="mt-4">Queued Songs</h4>
+        {queue.length === 0 ? (
+          <p>No songs in queue</p>
+        ) : (
+          <ul className="list-group">
+            {queue.map((index, idx) => (
+              <li key={idx} className="list-group-item d-flex justify-content-between">
+                {songs[index]}
+                <button className="btn btn-sm btn-danger" onClick={() => removeFromQueue(index)}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;

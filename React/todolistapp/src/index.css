@@ -1,13 +1,90 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: #8ddfeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 400px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin:10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+
+.tasksList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px; /* Adjusted for better fitting */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.tasksList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px; /* Adjusted for better fitting */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.task.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task div {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.task .completedButton {
+  background-color: #dc3545; /* Red for Delete */
+}
+
+.task .completedButton:hover {
+  background-color: #c82333;
+}
+
+.task .completeButton {
+  background-color: #28a745; /* Green for Complete */
+}
+
+.task .completeButton:hover {
+  background-color: #218838;
+}
+.task.completed{
+  text-decoration:line-through;
 }
