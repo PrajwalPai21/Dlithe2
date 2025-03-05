@@ -1,13 +1,22 @@
-import { useState } from "react";
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
 
-function Parent() {
-  const [message] = useState("Hello Ho");
-
-  return <Child message={message} />;
+export default function Profile() {
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  );
 }
-
-function Child({ message }) {
-  return <p>{message}</p>;
-}
-
-export default Parent;
