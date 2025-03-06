@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financity - Finance Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #002147;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #002147;
+            font-weight: bold;
+        }
+        .hero {
+            background: url("images/background.jpg") no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 50px;
+        }
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            margin-bottom: 20px;
+        }
+        .hero .contact-link {
+            font-size: 18px;
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .services {
+            text-align: center;
+            padding: 60px 0;
+            background: #f8f8f8;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+        .service {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .service:nth-child(1) { background-image: url('images/Service\ 1.jpg'); }
+        .service:nth-child(2) { background-image: url('images/Service\ 2.jpg'); }
+        .service:nth-child(3) { background-image: url('images/Service\ 3.jpg'); }
+        .service:nth-child(4) { background-image: url('images/Service\ 4.jpg'); }
+        .service:nth-child(5) { background-image: url('images/Service\ 5.jpg'); }
+        .service:nth-child(6) { background-image: url('images/Service\ 6.jpg'); }
+        .service h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .service a {
+            display: block;
+            padding: 12px 18px;
+            background: white;
+            color: #002147;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-top: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .service a:hover {
+            background: #002147;
+            color: white;
+        }
+        .contact {
+            text-align: center;
+            padding: 60px 20px;
+            background: #002147;
+            color: white;
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 18px;
+        }
+        .contact a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span>India ▼</span>
+            <span>Mon - Fri 10:00 AM-06:00 PM | +91-9454-5678-77</span>
+            <span>Email: Finance@GoodLayers.com</span>
+        </div>
+        <nav>
+            <div class="logo">Financity</div>
+            <ul>
+                <li><a href="home.html">Home</li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="features.html">Features</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Financity</h1>
+            <h2>Professional Financial Services</h2>
+            <p>We help you manage assets, provide financial advice, and allow you to focus on your core business.</p>
+            <p><a href="contact.html" class="contact-link">Contact Us</a></p>
+        </div>
+    </section>
+    
+    <section class="services">
+        <h2>Services We Provide</h2>
+        <div class="services-container">
+            <div class="service"><h3>On Time</h3><a href="on time.html">Learn More</a></div>
+            <div class="service"><h3>A Team Of Professionals</h3><a href="professionals.html">Learn More</a></div>
+            <div class="service"><h3>Business Analytics</h3><a href="business-analytics.html">Learn More</a></div>
+            <div class="service"><h3>Education Loan</h3><a href="education-loan.html">Learn More</a></div>
+            <div class="service"><h3>Insurance</h3><a href="insurance.html">Learn More</a></div>
+            <div class="service"><h3>Home Loan</h3><a href="home-loan.html">Learn More</a></div>
+        </div>
+    </section>
+</body>
+</html>
