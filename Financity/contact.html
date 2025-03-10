@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financity - Online Banking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #002147;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #002147;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('/Images/background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 50px;
+        }
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            font-size: 18px;
+            background: #ffcc00;
+            color: #002147;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+        .cta-button:hover {
+            background: #002147;
+            color: white;
+        }
+        .features, .services, .about-us, .testimonials, .contact {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .features-container, .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 80%;
+            margin: auto;
+        }
+        .feature, .service {
+            width: 30%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span>India ▼</span>
+            <span>24/7 Customer Support | +91-9454-5678-77</span>
+            <span>Email: support@financity.com</span>
+        </div>
+        <nav>
+            <div class="logo">Financity</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Banking Services</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Financity Online Banking</h1>
+            <h2>Secure, Fast, and Reliable Banking Solutions</h2>
+            <p>Manage your accounts, transfer funds, and access exclusive banking services online.</p>
+            <a href="signup.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+    
+    <section class="services">
+        <h2>Our Banking Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Personal Banking</h3>
+                <p>Open a savings or checking account with ease.</p>
+            </div>
+            <div class="service">
+                <h3>Loans & Credit</h3>
+                <p>Get personal, home, and business loans at competitive rates.</p>
+            </div>
+            <div class="service">
+                <h3>Investment Services</h3>
+                <p>Secure your future with our wealth management solutions.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-us">
+        <h2>About Financity</h2>
+        <p>With years of experience, Financity is your trusted financial partner. We provide secure and efficient banking solutions to help you achieve your financial goals.</p>
+    </section>
+    
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>"Financity has made banking so convenient. Their customer service is top-notch!" - Sarah D.</p>
+        <p>"I love how secure and easy it is to manage my money with Financity." - Mark T.</p>
+    </section>
+</body>
+</html>

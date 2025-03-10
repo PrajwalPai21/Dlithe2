@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Account</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: #002147;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Main Content */
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .content h1 {
+            color: #002147;
+            font-size: 32px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Image Styling */
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .benefits h2 {
+            color: #002147;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits ul li {
+            padding: 8px 0;
+            font-size: 16px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefits ul li::before {
+            content: "✔";
+            color: #002147;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #ffcc00;
+            color: #002147;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #002147;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Bank Name</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="accounts.html">Accounts</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Savings Account Section -->
+    <div class="content">
+        <h1>Savings Account</h1>
+        <p>Our savings accounts offer competitive interest rates and flexible options to grow your wealth.</p>
+        
+        <img src="/Images/Service 1.jpg" alt="Savings Account">
+
+        <!-- Benefits Section -->
+        <div class="benefits">
+            <h2>Benefits of Our Savings Account</h2>
+            <ul>
+                <li>Earn interest on your savings.</li>
+                <li>24/7 online and mobile banking access.</li>
+                <li>No hidden fees or minimum balance requirement.</li>
+                <li>Secure transactions with advanced protection.</li>
+                <li>Instant fund transfers and bill payments.</li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <a href="apply-savings.html" class="cta-button">Open an Account</a>
+    </div>
+
+</body>
+</html>

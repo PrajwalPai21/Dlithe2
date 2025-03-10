@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .top-bar {
+            background: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #002147;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #002147;
+            font-weight: bold;
+        }
+        .features {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f8f8;
+        }
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+        .feature {
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .feature:hover {
+            transform: scale(1.05);
+        }
+        .feature img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #002147;
+        }
+        .feature p {
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #002147;
+            color: white;
+            margin-top: 40px;
+        }
+        @media (max-width: 1024px) {
+            .features-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .features-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span>India ▼</span>
+            <span>Mon - Fri 10:00 AM-06:00 PM | +91-9454-5678-77</span>
+            <span>Email: Finance@GoodLayers.com</span>
+        </div>
+        <nav>
+            <div class="logo">Financity</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="features">
+        <h2>Our Banking Features</h2>
+        <div class="features-container">
+            <div class="feature">
+                <img src="Images/Service 1.jpg" alt="Secure Transactions">
+                <h3>Secure Transactions</h3>
+                <p>We ensure the highest level of security with end-to-end encryption, multi-factor authentication, and fraud detection systems.</p>
+            </div>
+            <div class="feature">
+                <img src="Images/Service 2.jpg" alt="Online Banking">
+                <h3>Online Banking</h3>
+                <p>Manage your account anytime, anywhere with seamless online banking services, including transfers, bill payments, and more.</p>
+            </div>
+            <div class="feature">
+                <img src="Images/Service 3.jpg" alt="24/7 Customer Support">
+                <h3>24/7 Customer Support</h3>
+                <p>Get assistance whenever you need it. Our dedicated support team is available round the clock to help you.</p>
+            </div>
+            <div class="feature">
+                <img src="Images/Service 4.jpg" alt="Mobile App">
+                <h3>Mobile App</h3>
+                <p>Enjoy banking on the go with our user-friendly mobile app, packed with features for easy account management.</p>
+            </div>
+            <div class="feature">
+                <img src="Images/Service 5.jpg" alt="Loan Management">
+                <h3>Loan Management</h3>
+                <p>Apply, track, and manage your loans effortlessly with our digital loan solutions tailored to your needs.</p>
+            </div>
+            <div class="feature">
+                <img src="Images/Service 6.jpg" alt="Investment Plans">
+                <h3>Investment Plans</h3>
+                <p>Grow your wealth with our expert-curated investment plans offering high returns and low risk.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Financity. All rights reserved.</p>
+    </footer>
+</body>
+</html>
