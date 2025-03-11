@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
-const API_KEY = "f604d8a09cd9b354d86a3975cfb8b735";
+const API_KEY = "APIKEY";
 const API_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`;
 
 
