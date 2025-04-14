@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e33207b1-1022-457f-ac89-1324d56e88cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/.idea/Final Project Music App.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/components/LoggedInInfo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/components/LoginForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/components/RegisterForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/components/SubscriptionPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/components/TrendingPlaylists.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/components/UserPlaylists.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/PaiMusicApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/controller/PlaylistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/controller/SpotifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/dto/CreatePlaylistRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/model/Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/repository/PlaylistRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/service/PlaylistService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/service/SpotifyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/java/com/pai_music/pai_music/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/pai-music/src/test/java/com/pai_music/pai_music/PaiMusicApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Excel Task Sheet/DlitheInternshipDailyUpdates.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Excel Task Sheet/DlitheInternshipDailyUpdates.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/Images/Service 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/Registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/features.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/services/apply-loan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/services/savings-account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Financity/transactionpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PortfolioWebsite/images/hero-headshot.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../React/movie-app/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/src/pages/MovieDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../React/movie-app/src/pages/MovieDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/movie-app/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/components/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/components/Subscription.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/reportWebVitals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/snoozebrosapp/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Final Project Music App - Copy/frontend/paimusic/src/setupTests.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vMRsNcgsl0qWnkvUurLLliH1rP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PaiMusicApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Rebasing main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/prajw/Documents/Dlithe Internship/Final Project Music App/pai-music",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.18620689",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e33207b1-1022-457f-ac89-1324d56e88cb" name="Changes" comment="" />
+      <created>1743953162932</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743953162932</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+</project>
