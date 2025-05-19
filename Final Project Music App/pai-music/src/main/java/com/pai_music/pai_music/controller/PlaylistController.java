@@ -1,5 +1,6 @@
 package com.pai_music.pai_music.controller;
 
+import com.pai_music.pai_music.dto.AddSongToPlaylistRequest;
 import com.pai_music.pai_music.dto.CreatePlaylistRequest;
 import com.pai_music.pai_music.model.Playlist;
 import com.pai_music.pai_music.service.PlaylistService;
@@ -30,7 +31,7 @@ public class PlaylistController {
 
     @GetMapping
     public List<Playlist> getAllPlaylists() {
-        return playlistService.getTrendingPlaylists(); // Same as trending for now
+        return playlistService.getTrendingPlaylists(); // Reuse for now
     }
 
     @GetMapping("/user/{email}")
@@ -38,7 +39,6 @@ public class PlaylistController {
         return playlistService.getPlaylistsByUserEmail(email);
     }
 
-    // ✅ CREATE Playlist using DTO
     @PostMapping("/create")
     public ResponseEntity<String> createPlaylist(@RequestBody CreatePlaylistRequest request) {
         if (request.getName() == null || request.getName().trim().isEmpty() || request.getUserEmail() == null) {
@@ -75,6 +75,17 @@ public class PlaylistController {
             return ResponseEntity.ok("Playlist deleted successfully");
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Playlist not found");
+        }
+    }
+
+    // ✅ Add Song to Playlist (updated to use AddSongToPlaylistRequest)
+    @PostMapping("/add-song")
+    public ResponseEntity<String> addSongToPlaylist(@RequestBody AddSongToPlaylistRequest request) {
+        boolean success = playlistService.addSongToPlaylist(request);  // Pass the entire request object
+        if (success) {
+            return ResponseEntity.ok("Song added to playlist successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Playlist or Song not found");
         }
     }
 }

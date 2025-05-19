@@ -14,18 +14,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/music")
-@CrossOrigin(origins = "http://localhost:3000") // Allow frontend to access this endpoint
+@CrossOrigin(origins = "http://localhost:3000")
 public class MusicController {
 
     private final Path musicDir = Paths.get("C:/Users/prajw/Documents/Dlithe Internship/Final Project Music App/LocalMusic"); // Directory containing songs
 
-    // Endpoint to list all available songs
     @GetMapping("/songs")
     public ResponseEntity<List<String>> getMusicFiles() {
         try {
             List<String> songList = new ArrayList<>();
 
-            // Get all mp3 files in the music directory
+            // all files
             Files.walk(musicDir)
                     .filter(path -> path.toString().endsWith(".mp3"))
                     .forEach(path -> songList.add(path.getFileName().toString())); // Add file names to the list
@@ -36,7 +35,6 @@ public class MusicController {
         }
     }
 
-    // Endpoint to serve music file
     @GetMapping("/{filename}")
     public ResponseEntity<Resource> getMusicFile(@PathVariable String filename) {
         try {

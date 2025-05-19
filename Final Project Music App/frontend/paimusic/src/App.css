@@ -1,0 +1,11 @@
+.alien-theme {
+    background: radial-gradient(circle at center, #0f0d2c 0%, #000000 100%);
+    color: #8effa7;
+    transition: background 0.5s ease;
+  }
+
+  .alien-theme * {
+    font-family: 'Courier New', monospace;
+    cursor: crosshair;
+  }
+  

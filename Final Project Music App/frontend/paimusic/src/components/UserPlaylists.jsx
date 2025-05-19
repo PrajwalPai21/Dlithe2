@@ -10,12 +10,14 @@ import {
   InputGroup,
 } from "react-bootstrap";
 
-function UserPlaylists() {
+// Accept alienMode and alienify as props
+function UserPlaylists({ alienMode, alienify }) {
   const [playlists, setPlaylists] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState(null);
   const [newName, setNewName] = useState("");
   const [newPlaylist, setNewPlaylist] = useState({ name: "", public: true });
+  const [error, setError] = useState(null);
 
   const fetchPlaylists = () => {
     const email = localStorage.getItem("userEmail");
@@ -33,6 +35,7 @@ function UserPlaylists() {
       })
       .catch((err) => {
         console.error("Error fetching playlists:", err);
+        setError("Failed to fetch playlists. Please try again later.");
         setLoading(false);
       });
   };
@@ -44,6 +47,7 @@ function UserPlaylists() {
   const handleCreate = async (e) => {
     e.preventDefault();
     const email = localStorage.getItem("userEmail");
+    setLoading(true);
     try {
       await axios.post("http://localhost:8080/api/playlists/create", {
         ...newPlaylist,
@@ -53,19 +57,27 @@ function UserPlaylists() {
       fetchPlaylists();
     } catch (err) {
       console.error("Error creating playlist:", err);
+      setError("Failed to create playlist. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleDelete = async (id) => {
+    setLoading(true);
     try {
       await axios.delete(`http://localhost:8080/api/playlists/${id}`);
       fetchPlaylists();
     } catch (err) {
       console.error("Error deleting playlist:", err);
+      setError("Failed to delete playlist. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleEdit = async (id) => {
+    setLoading(true);
     try {
       await axios.put(`http://localhost:8080/api/playlists/${id}`, {
         name: newName,
@@ -75,6 +87,9 @@ function UserPlaylists() {
       fetchPlaylists();
     } catch (err) {
       console.error("Error updating playlist name:", err);
+      setError("Failed to update playlist name. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -82,7 +97,9 @@ function UserPlaylists() {
 
   return (
     <Card className="shadow-sm mt-4 p-4">
-      <h4 className="mb-3">🎵 Your Playlists</h4>
+      <h4 className="mb-3">
+        {alienMode ? alienify("🎵 Your Playlists") : "🎵 Your Playlists"}
+      </h4>
 
       {/* 🎷 Create New Playlist Form */}
       <Form className="mb-4" onSubmit={handleCreate}>
@@ -90,7 +107,7 @@ function UserPlaylists() {
           <Col sm>
             <Form.Control
               type="text"
-              placeholder="Playlist name"
+              placeholder={alienMode ? alienify("Playlist name") : "Playlist name"}
               value={newPlaylist.name}
               onChange={(e) =>
                 setNewPlaylist({ ...newPlaylist, name: e.target.value })
@@ -108,21 +125,29 @@ function UserPlaylists() {
                 })
               }
             >
-              <option value="true">Public</option>
-              <option value="false">Private</option>
+              <option value="true">
+                {alienMode ? alienify("Public") : "Public"}
+              </option>
+              <option value="false">
+                {alienMode ? alienify("Private") : "Private"}
+              </option>
             </Form.Select>
           </Col>
           <Col sm="auto">
             <Button type="submit" variant="primary">
-              Add Playlist
+              {alienMode ? alienify("Add Playlist") : "Add Playlist"}
             </Button>
           </Col>
         </Row>
       </Form>
 
       {/* 📋 Playlist List */}
+      {error && <div className="alert alert-danger">{error}</div>}
+
       {playlists.length === 0 ? (
-        <p className="text-muted">No playlists found.</p>
+        <p className="text-muted">
+          {alienMode ? alienify("No playlists found.") : "No playlists found."}
+        </p>
       ) : (
         <ListGroup>
           {playlists.map((playlist) => (
@@ -146,20 +171,22 @@ function UserPlaylists() {
                       className="me-2"
                       onClick={() => handleEdit(playlist.id)}
                     >
-                      Save
+                      {alienMode ? alienify("Save") : "Save"}
                     </Button>
                     <Button
                       variant="secondary"
                       size="sm"
                       onClick={() => setEditingId(null)}
                     >
-                      Cancel
+                      {alienMode ? alienify("Cancel") : "Cancel"}
                     </Button>
                   </div>
                 </>
               ) : (
                 <>
-                  <span>{playlist.name}</span>
+                  <span>
+                    {alienMode ? alienify(playlist.name) : playlist.name}
+                  </span>
                   <div>
                     <Button
                       variant="outline-primary"
@@ -170,14 +197,14 @@ function UserPlaylists() {
                         setNewName(playlist.name);
                       }}
                     >
-                      Edit
+                      {alienMode ? alienify("Edit") : "Edit"}
                     </Button>
                     <Button
                       variant="outline-danger"
                       size="sm"
                       onClick={() => handleDelete(playlist.id)}
                     >
-                      Delete
+                      {alienMode ? alienify("Delete") : "Delete"}
                     </Button>
                   </div>
                 </>

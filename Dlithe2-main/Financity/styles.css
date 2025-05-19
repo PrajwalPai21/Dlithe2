@@ -1,0 +1,171 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #002147;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #002147;
+    font-weight: bold;
+}
+
+/* Register Button */
+.register-button {
+    background: #ffcc00;
+    color: #002147;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.register-button:hover {
+    background: #002147;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/Financity/Images/background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* CTA Button */
+.cta-button {
+    background: #ffcc00;
+    color: #002147;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background: #002147;
+    color: white;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px;
+}
+
+.services-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.service {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Service Image */
+.service img {
+    width: 100%;
+    height: 180px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Service Content */
+.service-content {
+    padding: 15px;
+}
+
+.service h3 {
+    color: #002147;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.service p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* About Us & Testimonials */
+.about-us, .testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.about-us h2, .testimonials h2 {
+    color: #002147;
+}
