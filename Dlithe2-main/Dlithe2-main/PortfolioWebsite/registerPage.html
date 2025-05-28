@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        .container h2 {
+            text-align: center;
+            color: #1565c0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #90caf9;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #1565c0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // NO DEFAULT SUBMISSIONN
+
+            let firstName = document.getElementById('first-name').value.trim();
+            let lastName = document.getElementById('last-name').value.trim();
+            let age = document.getElementById('age').value.trim();
+            let phone = document.getElementById('phone').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let password = document.getElementById('password').value.trim();
+
+            if (firstName === "" || lastName === "" || age === "" || phone === "" || email === "" || password === "") {
+                alert("All fields are required.");
+                return;
+            }
+
+            if (!/^[A-Za-z]+$/.test(firstName)) {
+                alert("First name should contain only letters.");
+                return;
+            }   
+
+            if (!/^[A-Za-z]+$/.test(lastName)) {
+                alert("Last name should contain only letters.");
+                return;
+            }
+
+            if (age < 18 || age > 120) {
+                alert("Age must be between 18 and 100.");
+                return;
+            }
+            let invalidNum = /^(?:\d)\1{9}$|1234567890|9876543210/;
+            // !/^\d{10}$/.test(phone)
+            if (invalidNum.test(phone) || !/^\d{10}$/.test(phone)) {  
+                alert("Please enter a valid 10 digit phone number.");
+                return;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter a valid email address.");
+                return;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return;
+            }
+
+            alert("Subscribed Successfully!");
+            window.location.href = "/PortfolioWebsite/NewsWebsiteUsingHTML/news.html"; // Redirects to news.html
+        });
+    </script>
+</body>
+</html>

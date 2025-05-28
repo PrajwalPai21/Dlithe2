@@ -35,7 +35,7 @@ const UserDashboard = ({ loggedInEmail, setLoggedInEmail, isAdmin, setIsAdmin })
     axios
       .get(`https://spotify23.p.rapidapi.com/search/?q=${query}&type=tracks`, {
         headers: {
-          "x-rapidapi-key": "YOUR_RAPID_API_KEY",
+          "x-rapidapi-key": "8de4bd6c30msh5d95f4d6af2bd43p1567d7jsn761e11ef30bd",
           "x-rapidapi-host": "spotify23.p.rapidapi.com",
         },
       })
