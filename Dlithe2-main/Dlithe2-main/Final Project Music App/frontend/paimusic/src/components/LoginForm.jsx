@@ -1,14 +1,33 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Card, Form, Button, Alert } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    // Check for admin login
+    if (email === "admin" && password === "admin") {
+      try {
+        await axios.post("http://localhost:8080/api/admin/login", {
+          username: email,
+          password: password,
+        });
+        setMessage("Admin login successful.");
+        navigate("/admin-dashboard");
+      } catch (err) {
+        setMessage("Admin login failed.");
+      }
+      return;
+    }
+
+    // Regular user login
     try {
       const res = await axios.post("http://localhost:8080/api/users/login", {
         email,
@@ -17,6 +36,7 @@ function LoginForm({ onLogin }) {
       localStorage.setItem("userEmail", email);
       onLogin(email); // Notify parent
       setMessage(res.data);
+      navigate("/user-dashboard"); // Or any user page
     } catch (err) {
       setMessage(err.response ? err.response.data : "Login failed.");
     }
@@ -27,10 +47,10 @@ function LoginForm({ onLogin }) {
       <Card.Body>
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formEmail">
-            <Form.Label>Email</Form.Label>
+            <Form.Label>Email / Username</Form.Label>
             <Form.Control
-              type="email"
-              placeholder="you@example.com"
+              type="text"
+              placeholder="you@example.com or 'admin'"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
