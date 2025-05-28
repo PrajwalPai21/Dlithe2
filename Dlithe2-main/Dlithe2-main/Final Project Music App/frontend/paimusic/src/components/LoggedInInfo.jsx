@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-function LoggedInInfo() {
-  const [email, setEmail] = useState("");
-
-  useEffect(() => {
-    const storedEmail = localStorage.getItem("userEmail");
-    if (storedEmail) {
-      setEmail(storedEmail);
-    }
-  }, []);
+function LoggedInInfo({ email, setLoggedInEmail, setIsAdmin }) {
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem("userEmail");
-    window.location.reload(); 
+    setLoggedInEmail("");
+    setIsAdmin(false);
+    navigate("/"); // redirect to login page
   };
 
   if (!email) return null;
