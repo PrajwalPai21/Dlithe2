@@ -74,7 +74,7 @@ const AdminDashboard = () => {
     <Container className="py-4">
       <h2 className="text-center text-danger mb-4">Admin Dashboard</h2>
       <p className="text-center">
-        Welcome, Admin! You can manage users, playlists, and more here.
+        Welcome back, Admin!
       </p>
 
       {error && <Alert variant="danger">{error}</Alert>}
@@ -114,7 +114,7 @@ const AdminDashboard = () => {
                 style={{ cursor: "pointer" }}
                 onClick={() => handleSort("email")}
               >
-                Email {sortBy === "email" && "↓"}
+                Email {sortBy === "email" && "⬇️"}
               </th>
               <th>Password</th>
               <th>Created At</th>

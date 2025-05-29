@@ -21,9 +21,7 @@ import SubscriptionPage from "./components/SubscriptionPage";
 import MusicPlayer from "./components/MusicPlayer";
 import AdminDashboard from "./components/AdminDashboard";
 
-// ==========================
-// Dashboard for logged-in user or admin
-// ==========================
+// Dashboard for admin
 const UserDashboard = ({ loggedInEmail, setLoggedInEmail, isAdmin, setIsAdmin }) => {
   const [tracks, setTracks] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -108,7 +106,7 @@ const UserDashboard = ({ loggedInEmail, setLoggedInEmail, isAdmin, setIsAdmin })
             )}
           </div>
 
-          {/* User's Playlists */}
+          {/* <User's Playlists> */}
           <UserPlaylists email={loggedInEmail} />
 
           {/* Admin Only: List All Users */}

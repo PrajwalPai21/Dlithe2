@@ -18,26 +18,26 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    // ✅ Fetch all users
+    // Fetch all users
     @GetMapping
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    // ✅ Login
+    // Login
     @PostMapping("/login")
     public String loginUser(@RequestBody User user) {
         Optional<User> match = userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
         return match.isPresent() ? "Login successful!" : "Invalid email or password.";
     }
 
-    // ✅ Get user by email
+    // Get user by email
     @GetMapping("/email/{email}")
     public User getUserByEmail(@PathVariable String email) {
         return userRepository.findByEmail(email).orElse(null);
     }
 
-    // ✅ Register
+    // Register
     @PostMapping("/register")
     public String registerUser(@RequestBody User user) {
         if (userRepository.findByEmail(user.getEmail()).isPresent()) {
@@ -47,7 +47,7 @@ public class UserController {
         return "User registered successfully!";
     }
 
-    // ✅ 🔥 DELETE user by ID
+    // DELETE user by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         if (userRepository.existsById(id)) {

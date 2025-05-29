@@ -86,7 +86,7 @@ function LoginForm({ onLogin }) {
 
           <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formEmail">
-              <Form.Label>Email / Username</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="you@example.com"
